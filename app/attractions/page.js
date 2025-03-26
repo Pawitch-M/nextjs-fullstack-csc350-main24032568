@@ -1,6 +1,6 @@
 import React from 'react'
-import { 
-  Card, CardActions, CardContent, CardMedia, Button, Typography, Grid 
+import {
+  Card, CardActions, CardContent, CardMedia, Button, Typography, Grid
 } from '@mui/material'
 
 export async function getData() {
@@ -10,6 +10,7 @@ export async function getData() {
   }
   return res.json()
 }
+
 
 export default async function page() {
   if (!process.env.NEXT_PUBLIC_API_URL) {
@@ -48,4 +49,3 @@ export default async function page() {
     </div>
   )
 }
-

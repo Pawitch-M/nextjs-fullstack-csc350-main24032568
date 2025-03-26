@@ -5,7 +5,8 @@ export async function GET(request, {params}){
     const id = params.id
     const promisePool = mysqlPool.promise()
     const [rows, fields] = await promisePool.query(
-        'SELECT * FROM attractions WHERE id = ?'+id
+        `SELECT * FROM attractions WHERE id = ?`,
+        [id]
     )
     return NextResponse.json(rows)
 }
